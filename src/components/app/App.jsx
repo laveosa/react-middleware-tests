@@ -19,6 +19,7 @@ class App extends React.Component {
         <Navigation />
         <Switch>
           <Route exact path="/" render={() => <Redirect to="/home" />} />
+          <Route path="/project-one/" render={() => <Redirect to="/home" />} />
           <Route path="/home" component={HomePage} />
           <Route path="/portfolio" component={PortfolioPage} />
           <Route path="/contacts" component={ContactsPage} />
