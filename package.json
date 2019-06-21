@@ -2,7 +2,7 @@
   "name": "project-one",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://laveosa.github.io/project-one/",
+  "homepage": "https://laveosa.github.io/project-one/home/",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
