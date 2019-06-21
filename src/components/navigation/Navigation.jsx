@@ -10,7 +10,7 @@ export default () => {
     >
       <ul className="nav p-2">
         <li className="nav-item m-1 ">
-          <NavLink to="/home" className="nav-link rounded">
+          <NavLink to="/" className="nav-link rounded">
             <span className="text-light">Home</span>
           </NavLink>
         </li>
