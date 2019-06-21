@@ -50,9 +50,16 @@ class CollegeForm extends React.Component {
               })}
             </div>
           </div>
-          <div className="button-area">
-            <div className="btn btn-success">add</div>
-            <div className="btn btn-secondary">clear</div>
+          <div className="button-area d-flex align-items-center justify-content-end">
+            <button className="btn btn-primary m-1 w-25 text-uppercase">
+              generate
+            </button>
+            <button className="btn btn-success m-1 w-25 text-uppercase">
+              add
+            </button>
+            <button className="btn btn-secondary m-1 w-25 text-uppercase">
+              clear
+            </button>
           </div>
         </div>
       </div>
