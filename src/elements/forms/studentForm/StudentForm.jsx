@@ -8,9 +8,7 @@ class StudentForm extends React.Component {
       gender: "1"
     };
   }
-  componentWillMount() {
-    console.log(this.props);
-  }
+  componentWillMount() {}
   render() {
     return (
       <div id="StudentForm">
@@ -153,6 +151,7 @@ class StudentForm extends React.Component {
     };
 
     this.props.addStudent(newStudent);
+    this.clearHandler();
   };
   clearHandler = () => {
     this.refs.name.value = null;
