@@ -2,6 +2,13 @@ import React from "react";
 import "./styles.scss";
 
 class TicherForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      gender: "1"
+    };
+  }
+  componentWillMount() {}
   render() {
     return (
       <div id="TicherForm">
@@ -42,6 +49,10 @@ class TicherForm extends React.Component {
                   className="form-check-input"
                   type="radio"
                   name="gender"
+                  checked
+                  onChange={event => {
+                    this.setState({ gender: event.target.value });
+                  }}
                   ref="gender"
                   value="1"
                 />
@@ -55,6 +66,9 @@ class TicherForm extends React.Component {
                   className="form-check-input"
                   type="radio"
                   name="gender"
+                  onChange={event => {
+                    this.setState({ gender: event.target.value });
+                  }}
                   ref="gender"
                   value="2"
                 />
@@ -83,13 +97,22 @@ class TicherForm extends React.Component {
             />
           </div>
           <div className="button-area d-flex align-items-center justify-content-end">
-            <button className="btn btn-primary m-1 w-25 text-uppercase">
+            <button
+              className="btn btn-primary m-1 w-25 text-uppercase"
+              onClick={this.generateHandler}
+            >
               generate
             </button>
-            <button className="btn btn-success m-1 w-25 text-uppercase">
+            <button
+              className="btn btn-success m-1 w-25 text-uppercase"
+              onClick={this.addHandler}
+            >
               add
             </button>
-            <button className="btn btn-secondary m-1 w-25 text-uppercase">
+            <button
+              className="btn btn-secondary m-1 w-25 text-uppercase"
+              onClick={this.clearHandler}
+            >
               clear
             </button>
           </div>
@@ -97,6 +120,36 @@ class TicherForm extends React.Component {
       </div>
     );
   }
+  generateHandler = () => {
+    this.refs.name.value = "Gary";
+    this.refs.familyName.value = "Stannerpo";
+    this.refs.age.value = "67";
+    this.refs.gender.value = "1";
+    this.setState({ gender: "1" });
+    this.refs.facult.value = "IT";
+    this.refs.experience.value = "35";
+  };
+  addHandler = () => {
+    const newTicher = {
+      name: this.refs.name.value,
+      familyName: this.refs.familyName.value,
+      age: this.refs.age.value,
+      gender: this.state.gender,
+      facult: this.refs.facult.value,
+      course: this.refs.experience.value
+    };
+
+    this.props.addTicher(newTicher);
+    this.clearHandler();
+  };
+  clearHandler = () => {
+    this.refs.name.value = null;
+    this.refs.familyName.value = null;
+    this.refs.age.value = null;
+    this.refs.gender.value = null;
+    this.refs.facult.value = null;
+    this.refs.experience.value = null;
+  };
 }
 
 export default TicherForm;
