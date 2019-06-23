@@ -12,7 +12,7 @@ class StudentForm extends React.Component {
   render() {
     return (
       <div id="StudentForm">
-        <div className="student-form m-3 p-3 border">
+        <div className="student-form m-3 p-3 border  bg-white">
           <div className="form-group">
             <label className="badge badge-secondary">name:</label>
             <input

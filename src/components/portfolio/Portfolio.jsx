@@ -1,14 +1,21 @@
 import React from "react";
 import "./styles.scss";
 
+import PageStructure from "../../elements/pageStructure/PageStructutre";
+import PageLeftSide from "../../elements/pageStructure/PageLeftSide";
+import PageRightSide from "../../elements/pageStructure/PageRightSide";
+
 class Portfolio extends React.Component {
   render() {
     return (
-      <div id="PortfolioComponent">
-        <div className="portfolio-container">
-          <h1>Portfolio page</h1>
-        </div>
-      </div>
+      <PageStructure>
+        <PageLeftSide>
+          <span>search</span>
+        </PageLeftSide>
+        <PageRightSide>
+          <span>content</span>
+        </PageRightSide>
+      </PageStructure>
     );
   }
 }

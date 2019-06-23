@@ -12,7 +12,7 @@ class TicherForm extends React.Component {
   render() {
     return (
       <div id="TicherForm">
-        <div className="ticher-form m-3 p-3 border">
+        <div className="ticher-form m-3 p-3 border bg-white">
           <div className="form-group">
             <label className="badge badge-secondary">name:</label>
             <input

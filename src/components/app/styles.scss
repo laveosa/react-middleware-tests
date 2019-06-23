@@ -1,7 +1,7 @@
-#AppComponent {
-  height: 100vh;
-  overflow-y: auto;
-  .app-container {
-    height: 100%;
-  }
+body {
+    height: 100vh;
+    overflow-y: auto;
+    #rootApp {
+        height: 100%;
+    }
 }

@@ -12,7 +12,7 @@ class CollegeForm extends React.Component {
     const statusAmount = [{}, {}, {}, {}];
     return (
       <div id="CollegeForm">
-        <div className="college-form m-3 p-3 border">
+        <div className="college-form m-3 p-3 border bg-white">
           <div className="form-group">
             <label className="badge badge-secondary">college name:</label>
             <input

@@ -8,7 +8,7 @@ export default () => {
   return (
     <div
       id="NavigationComponent"
-      className="navigation-container d-flex bg-dark align-items-center justify-content-between pr-3"
+      className="navigation-container d-flex bg-dark align-items-center justify-content-between pr-3 border-bottom"
     >
       <div className="counter-area d-flex">
         <CounterContainer />
@@ -16,17 +16,17 @@ export default () => {
       <ul className="nav p-2">
         <li className="nav-item m-1 ">
           <NavLink to="/home" className="nav-link rounded">
-            <span className="text-light">Home</span>
+            <span className="text-light text-capitalize">forms</span>
           </NavLink>
         </li>
         <li className="nav-item m-1">
           <NavLink to="/portfolio" className="nav-link rounded">
-            <span className="text-light">Portfolio</span>
+            <span className="text-light text-capitalize">manage</span>
           </NavLink>
         </li>
         <li className="nav-item m-1">
           <NavLink to="/contacts" className="nav-link rounded">
-            <span className="text-light">Contacts</span>
+            <span className="text-light text-capitalize">Contacts</span>
           </NavLink>
         </li>
       </ul>

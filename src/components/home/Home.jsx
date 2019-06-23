@@ -8,17 +8,17 @@ class Home extends React.Component {
   render() {
     return (
       <div id="HomeComponent">
-        <div className="home-container container-fluid row m-0 p-0">
+        <div className="home-container container-fluid row m-0 p-0 bg-dark">
           <div className="form-cover col-4 p-0">
-            <h2 className="pl-3 mb-0 mt-3">Student</h2>
+            <h2 className="pl-3 mb-0 mt-3 text-light">Student</h2>
             <StudentFormContainer />
           </div>
           <div className="form-cover col-4 p-0">
-            <h2 className="pl-3 mb-0 mt-3">Ticher</h2>
+            <h2 className="pl-3 mb-0 mt-3 text-light">Ticher</h2>
             <TicherFormContainer />
           </div>
           <div className="form-cover col-4 p-0">
-            <h2 className="pl-3 mb-0 mt-3">College</h2>
+            <h2 className="pl-3 mb-0 mt-3 text-light">College</h2>
             <CollegeFormContainer />
           </div>
         </div>
