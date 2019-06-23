@@ -27,7 +27,7 @@ const mapStateToProps = state => {
   return {
     studentCount: state.students.students,
     tichersCount: state.tichers.tichers,
-    collegesCount: null
+    collegesCount: state.colleges.colleges
   };
 };
 
