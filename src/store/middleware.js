@@ -1,6 +1,13 @@
+import * as actions from "./actions";
+
 export default store => next => action => {
-  console.log(store);
-  console.log(action);
+  if (action.type === actions.UP_COUNT) {
+    console.log("middleware UP_COUNT actions");
+  }
+
+  if (action.type === actions.DOWN_COUNT) {
+    console.log("middleware DOWN_COUNT actions");
+  }
 
   next(action);
 };
