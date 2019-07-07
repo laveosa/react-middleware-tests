@@ -1,15 +1,15 @@
 import React from "react";
 import Counter from "./Counter";
 import { connect } from "react-redux";
-import * as actions from "../../store/actions";
+import * as actions from "../store/actions";
 
 class CounterContainer extends React.Component {
   render() {
     return (
       <Counter
         count={this.props.count}
-        upCount={this.props.upCountAsync}
-        downCount={this.props.downCounAsync}
+        upCount={this.props.upCount}
+        downCount={this.props.downCount}
       />
     );
   }
@@ -23,11 +23,11 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    upCountAsync: val => {
-      dispatch(actions.upCountAsync(val));
+    upCount: val => {
+      dispatch(actions.upCount(val));
     },
-    downCounAsync: val => {
-      dispatch(actions.downCountAsunc(val));
+    downCount: val => {
+      dispatch(actions.downCount(val));
     }
   };
 };

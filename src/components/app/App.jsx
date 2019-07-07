@@ -3,9 +3,11 @@ import CounterContainer from "../counter/CounterContainer";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import countReducer from "../../store/reducer";
-import thunk from "redux-thunk";
+import createMiddleware from "redux-saga";
 
-const store = createStore(countReducer, applyMiddleware(thunk));
+const sagaMiddleware = createMiddleware();
+
+const store = createStore(countReducer);
 
 class App extends React.Component {
   render() {
