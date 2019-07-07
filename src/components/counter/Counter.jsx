@@ -3,7 +3,7 @@ import React from "react";
 export default props => {
   return (
     <div className="counter-container container">
-      <div className="jumbotron d-flex flex-column">
+      <div className="jumbotron d-flex flex-column mt-5">
         <div className="count-cover mb-3 text-center">
           <h1>{props.count}</h1>
         </div>
