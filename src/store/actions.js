@@ -17,9 +17,11 @@ export function upCount(val) {
 }
 
 export function downCountAsunc(val) {
-  console.log(DOWN_COUNT, val);
+  return dispatch => {
+    console.log(DOWN_COUNT, val);
 
-  return dispatch(downCount(val));
+    return dispatch(downCount(val));
+  };
 }
 
 export function downCount(val) {
