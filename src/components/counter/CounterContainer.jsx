@@ -24,10 +24,16 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     upCount: val => {
-      dispatch(actions.upCount(val));
+      dispatch({
+        type: actions.UP_COUNT_ASYNC,
+        payload: val
+      });
     },
     downCount: val => {
-      dispatch(actions.downCount(val));
+      dispatch({
+        type: actions.DOWN_COUNT_ASYNC,
+        payload: val
+      });
     }
   };
 };
